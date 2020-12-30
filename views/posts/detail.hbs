@@ -1,0 +1,29 @@
+{{#with post}}
+
+<h1>Post detail</h1>
+
+<div class="card" style="width: 100%;">
+
+  <img src="{{image}}" class="card-img-top" alt="...">
+
+  <div class="card-body">
+    <h3 class="card-title">{{title}}</h3>
+    <p class="card-text">{{text}}</p>
+
+    <div class="d-flex justify-content-between">
+
+      <form action="/posts/{{id}}/edit" method="GET">
+        <a class="btn btn-primary mr-3" href="/posts/{{id}}/edit"><i class="fa fa-cog mr-2"></i> Edit</a>
+      </form>
+
+      <form action="/posts/{{id}}/delete" method="POST">
+        <button type="submit" class="btn btn-danger"><i class="fa fa-trash ml-2"></i> Delete</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+{{/with}}

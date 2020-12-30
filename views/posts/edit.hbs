@@ -1,0 +1,30 @@
+<div class="container pt-5">
+    <h1>Edit Post</h1>
+    
+    <form action="/posts/edit/{{id}}" method="POST">
+
+        <div class="form-group mt-3">
+            <label for="title">Title</label>
+            <input name="title" type="text" class="form-control" value="{{post.title}}">
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="image">Image</label>
+            <input name="image" type="text" class="form-control" placeholder="Enter image" value="{{post.image}}">
+        </div>
+
+        <div class="form-group mt-3">
+            <label for="text">Text</label>
+            <textarea name="text" type="text" class="form-control" placeholder="Enter post text"
+                rows="10">{{post.text}}</textarea>
+        </div>
+
+        <div class="form-group mt-2">
+            <button class="btn btn-success btn-block">
+                Save
+            </button>
+        </div>
+
+    </form>
+
+</div>
